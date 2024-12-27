@@ -59,6 +59,11 @@ const CustomConnectButton = ({ setUserAddress, setNetwork }) => {
                 <Button onClick={openChainModal} colorScheme="blue" size="md">
                   {chain?.name ?? 'Unknown Chain'}
                 </Button>
+                {(() => {
+                    setUserAddress(account?.address || '');
+                    const network = chain?.name.toLowerCase() === "sepolia" ? 'eth-sepolia' : 'eth-mainnet';
+                    setNetwork(network);
+                })()}
                 <Button onClick={openAccountModal} colorScheme="blue" size="md">
                   {account?.displayName}
                   {account?.displayBalance ? ` (${account.displayBalance})` : ''}

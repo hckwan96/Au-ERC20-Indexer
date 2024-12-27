@@ -11,10 +11,8 @@ import {
   ChakraProvider,
   Link
 } from '@chakra-ui/react';
-import { Alchemy, Network, Utils } from 'alchemy-sdk';
+import { Alchemy, Utils } from 'alchemy-sdk';
 import { useState } from 'react';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { useChains, useAccount } from 'wagmi';
 import CustomConnectButton from './CustomConnectButton'
 
 function App() {
