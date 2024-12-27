@@ -60,7 +60,6 @@ const CustomConnectButton = ({ setUserAddress, setNetwork }) => {
                   {chain?.name ?? 'Unknown Chain'}
                 </Button>
                 {(() => {
-                    setUserAddress(account?.address || '');
                     const network = chain?.name.toLowerCase() === "sepolia" ? 'eth-sepolia' : 'eth-mainnet';
                     setNetwork(network);
                 })()}
